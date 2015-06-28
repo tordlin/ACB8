@@ -15,7 +15,7 @@ public class HW52 {
         int value = sc.nextInt();
         int sum = 1;
 
-        for(int i = 1; i < value + 1; i++){
+        for(int i = 1; i < value + 1; i++){ // recursion
             sum = i * sum;
         }
 

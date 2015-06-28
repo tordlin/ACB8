@@ -19,7 +19,7 @@ public class HW53 {
         int value = sc.nextInt();
         char check = '8';
 
-        String stringValue = Integer.toString(value);
+        String stringValue = String.valueOf(value);
         int valueLength = stringValue.length();
         int repeating = 0;
         for(int i = 0; i < valueLength; i++){
