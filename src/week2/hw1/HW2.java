@@ -21,6 +21,7 @@ public class HW2 {
         int max = array[0];
         int indexMin = 0;
         int indexMax = 0;
+        int temp;
 
         ArrayHelper.printArray(array);
 
@@ -35,5 +36,12 @@ public class HW2 {
         indexMax = ArrayHelper.findIndexMax(size, max, indexMax, array);
         System.out.print(max + " ");
         System.out.println(indexMax);
+
+        temp = min;
+        array[indexMin] = array[indexMax];
+        array[indexMax] = temp;
+
+        ArrayHelper.printArray(array);
+
     }
 }
