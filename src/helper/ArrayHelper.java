@@ -20,10 +20,6 @@ public class ArrayHelper {
         }
     }
 
-    public static void changeRow(){
-        System.out.println();
-    }
-
     public static int findMin(int size, int min, int[] array) {
         for (int i = 0; i < size; i++) {
             if (min > array[i]) {

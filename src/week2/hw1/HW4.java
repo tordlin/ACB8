@@ -1,35 +1,36 @@
 package week2.hw1;
 
-
 import helper.ArrayHelper;
+
 import java.util.Scanner;
 
 /**
  * Created by Tordlin on 29/06/2015.
  */
 
-/*Найти минимальное и максимальное значения в массиве и вывести их на консоль*/
+/*Посчитать сколько цифр(цифра задается пользователем) в массиве*/
 
-public class HW1 {
+public class HW4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter size and diapason");
         int size = sc.nextInt();
         int diapason = sc.nextInt();
         int[] array = ArrayHelper.createRandomArray(size, diapason);
-        int min = array[0];
-        int max = array[0];
-
+        System.out.println("Value to check");
+        int check = sc.nextInt();
         ArrayHelper.printArray(array);
-
         System.out.println();
+        int count = 0;
 
-        min = ArrayHelper.findMin(size, min, array);
-        System.out.println(min);
+        for(int i = 0; i < size; i++){
+            if(count == array[i]){
+                count++;
+            }
+        }
 
-        max = ArrayHelper.findMax(size, max, array);
-        System.out.println(max);
+        System.out.println(count);
+
 
     }
 }
-

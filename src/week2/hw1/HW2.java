@@ -25,7 +25,7 @@ public class HW2 {
 
         ArrayHelper.printArray(array);
 
-        ArrayHelper.changeRow();
+        System.out.println();
 
         min = ArrayHelper.findMin(size, min, array);
         indexMin = ArrayHelper.findIndexMin(size, min, indexMin, array);
