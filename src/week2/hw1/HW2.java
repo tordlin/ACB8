@@ -1,16 +1,16 @@
 package week2.hw1;
 
-
 import helper.ArrayHelper;
+
 import java.util.Scanner;
 
 /**
  * Created by Tordlin on 29/06/2015.
  */
 
-/*Ќайти минимальное и максимальное значени€ в массиве и вывести их на консоль*/
+/*2) ѕомен€ть местами наибольший и наименьший элементы в массиве*/
 
-public class HW1 {
+public class HW2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter size and diapason");
@@ -19,17 +19,21 @@ public class HW1 {
         int[] array = ArrayHelper.createRandomArray(size, diapason);
         int min = array[0];
         int max = array[0];
+        int indexMin = 0;
+        int indexMax = 0;
 
         ArrayHelper.printArray(array);
 
         ArrayHelper.changeRow();
 
         min = ArrayHelper.findMin(size, min, array);
-        System.out.println(min);
+        indexMin = ArrayHelper.findIndexMin(size, min, indexMin, array);
+        System.out.print(min + " ");
+        System.out.println(indexMin);
 
         max = ArrayHelper.findMax(size, max, array);
-        System.out.println(max);
-
+        indexMax = ArrayHelper.findIndexMax(size, max, indexMax, array);
+        System.out.print(max + " ");
+        System.out.println(indexMax);
     }
 }
-
