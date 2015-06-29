@@ -20,8 +20,9 @@ public class ArrayHelper {
         }
     }
 
-    public static int findMin(int size, int min, int[] array) {
-        for (int i = 0; i < size; i++) {
+    public static int findMin(int[] array) {
+        int min = array[0];
+        for (int i = 0; i < array.length; i++) {
             if (min > array[i]) {
                 min = array[i];
             }
@@ -29,8 +30,10 @@ public class ArrayHelper {
         return min;
     }
 
-    public static int findIndexMin(int size, int min, int indexMin, int[] array) {
-        for (int i = 0; i < size; i++) {
+    public static int findIndexMin(int[] array) {
+        int min = array[0];
+        int indexMin = 0;
+        for (int i = 0; i < array.length; i++) {
             if (min > array[i]) {
                 min = array[i];
                 indexMin = i;
@@ -39,8 +42,9 @@ public class ArrayHelper {
         return indexMin;
     }
 
-    public static int findMax(int size, int max, int[] array) {
-        for (int i = 0; i < size; i++) {
+    public static int findMax(int[] array) {
+        int max = array[0];
+        for (int i = 0; i < array.length; i++) {
             if (max < array[i]) {
                 max = array[i];
             }
@@ -48,8 +52,10 @@ public class ArrayHelper {
         return max;
     }
 
-    public static int findIndexMax(int size, int max, int indexMax, int[] array) {
-        for (int i = 0; i < size; i++) {
+    public static int findIndexMax(int[] array) {
+        int max = array[0];
+        int indexMax = 0;
+        for (int i = 0; i < array.length; i++) {
             if (max < array[i]) {
                 max = array[i];
                 indexMax = i;

@@ -17,22 +17,22 @@ public class HW2 {
         int size = sc.nextInt();
         int diapason = sc.nextInt();
         int[] array = ArrayHelper.createRandomArray(size, diapason);
-        int min = array[0];
-        int max = array[0];
-        int indexMin = 0;
-        int indexMax = 0;
+        int min;
+        int max;
+        int indexMin;
+        int indexMax;
         int temp;
 
         ArrayHelper.printArray(array);
         System.out.println();
 
-        min = ArrayHelper.findMin(size, min, array);
-        indexMin = ArrayHelper.findIndexMin(size, min, indexMin, array);
+        min = ArrayHelper.findMin(array);
+        indexMin = ArrayHelper.findIndexMin(array);
         System.out.print(min + " ");
         System.out.println(indexMin);
 
-        max = ArrayHelper.findMax(size, max, array);
-        indexMax = ArrayHelper.findIndexMax(size, max, indexMax, array);
+        max = ArrayHelper.findMax(array);
+        indexMax = ArrayHelper.findIndexMax(array);
         System.out.print(max + " ");
         System.out.println(indexMax);
 

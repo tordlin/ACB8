@@ -24,10 +24,10 @@ public class HW1 {
 
         System.out.println();
 
-        min = ArrayHelper.findMin(size, min, array);
+        min = ArrayHelper.findMin(array);
         System.out.println(min);
 
-        max = ArrayHelper.findMax(size, max, array);
+        max = ArrayHelper.findMax(array);
         System.out.println(max);
 
     }
