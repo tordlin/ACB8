@@ -1,4 +1,4 @@
-package week2.hw1;
+package week2.hw2;
 
 import helper.ArrayHelper;
 

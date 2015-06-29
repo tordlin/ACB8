@@ -1,36 +1,35 @@
-package week2.hw1;
+package week2.hw2;
+
 
 import helper.ArrayHelper;
-
 import java.util.Scanner;
 
 /**
  * Created by Tordlin on 29/06/2015.
  */
 
-/*Найти среднее арифметическое массива*/
+/*Найти минимальное и максимальное значения в массиве и вывести их на консоль*/
 
-public class HW6 {
+public class HW1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter size and diapason");
         int size = sc.nextInt();
         int diapason = sc.nextInt();
         int[] array = ArrayHelper.createRandomArray(size, diapason);
-        int sum = 0;
-        double middle;
+        int min = array[0];
+        int max = array[0];
 
         ArrayHelper.printArray(array);
+
         System.out.println();
 
-        for(int i = 0; i < size; i++){
-            sum += array[i];
-        }
+        min = ArrayHelper.findMin(size, min, array);
+        System.out.println(min);
 
-        System.out.println(sum);
+        max = ArrayHelper.findMax(size, max, array);
+        System.out.println(max);
 
-        middle = (double)sum / (double)size;
-
-        System.out.println(middle);
     }
 }
+

@@ -1,4 +1,4 @@
-package week2.hw1;
+package week2.hw2;
 
 import helper.ArrayHelper;
 
@@ -24,7 +24,6 @@ public class HW2 {
         int temp;
 
         ArrayHelper.printArray(array);
-
         System.out.println();
 
         min = ArrayHelper.findMin(size, min, array);
