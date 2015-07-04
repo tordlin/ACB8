@@ -25,7 +25,6 @@ public class HW7 {
         double middleSecondHalf;
 
         ArrayHelper.printArray(array);
-        System.out.println();
 
         if(size % 2 == 0){
             sizeFirstHalf = size / 2;

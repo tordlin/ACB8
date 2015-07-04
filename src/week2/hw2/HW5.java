@@ -28,9 +28,6 @@ public class HW5 {
             }
         }
 
-        for(int i = 0; i < 5; i++){
-            System.out.print(mainArray[i] + " ");
-        }
-
+        ArrayHelper.printArray(mainArray);
     }
 }

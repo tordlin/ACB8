@@ -18,16 +18,18 @@ public class ArrayHelper {
         for(int i = 0; i < array.length; i++){
             System.out.print(array[i] + " ");
         }
+
+        System.out.println();
     }
 
     public static int findMin(int[] array) {
-        int min = array[0];
+        /*int min = array[0];
         for (int i = 0; i < array.length; i++) {
             if (min > array[i]) {
                 min = array[i];
             }
-        }
-        return min;
+        }*/
+        return array[findIndexMin(array)];
     }
 
     public static int findIndexMin(int[] array) {
@@ -43,13 +45,13 @@ public class ArrayHelper {
     }
 
     public static int findMax(int[] array) {
-        int max = array[0];
+        /*int max = array[0];
         for (int i = 0; i < array.length; i++) {
             if (max < array[i]) {
                 max = array[i];
             }
-        }
-        return max;
+        }*/
+        return array[findIndexMax(array)];
     }
 
     public static int findIndexMax(int[] array) {

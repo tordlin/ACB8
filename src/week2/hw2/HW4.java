@@ -17,14 +17,15 @@ public class HW4 {
         int size = sc.nextInt();
         int diapason = sc.nextInt();
         int[] array = ArrayHelper.createRandomArray(size, diapason);
+
         System.out.println("Value to check");
         int check = sc.nextInt();
+
         ArrayHelper.printArray(array);
-        System.out.println();
         int count = 0;
 
         for(int i = 0; i < size; i++){
-            if(count == array[i]){
+            if(check == array[i]){
                 count++;
             }
         }

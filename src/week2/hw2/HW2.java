@@ -24,7 +24,6 @@ public class HW2 {
         int temp;
 
         ArrayHelper.printArray(array);
-        System.out.println();
 
         min = ArrayHelper.findMin(array);
         indexMin = ArrayHelper.findIndexMin(array);

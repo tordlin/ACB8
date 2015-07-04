@@ -18,10 +18,9 @@ public class HW6 {
         int diapason = sc.nextInt();
         int[] array = ArrayHelper.createRandomArray(size, diapason);
         int sum = 0;
-        double middle;
+        int middle;
 
         ArrayHelper.printArray(array);
-        System.out.println();
 
         for(int i = 0; i < size; i++){
             sum += array[i];
@@ -29,7 +28,7 @@ public class HW6 {
 
         System.out.println(sum);
 
-        middle = (double)sum / (double)size;
+        middle = sum / size;
 
         System.out.println(middle);
     }
