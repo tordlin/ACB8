@@ -60,4 +60,19 @@ public class MatrixHelper {
         return matrix;
     }
 
+
+    public static void swap(int a, int b, int x, int y, int[][] matrix) {
+        int temp = matrix[a][b];
+        matrix[a][b] = matrix[x][y];
+        matrix[x][y] = temp;
+    }
+
+    public static void swapRows(int a, int b, int[][] matrix) {
+        /*for(int i = 0; i < matrix[a].length; i++){
+            MatrixHelper.swap(a,i,b,i, matrix);
+        }*/
+        int[]temp = matrix[a];
+        matrix[a] = matrix[b];
+        matrix[b] = temp;
+    }
 }
