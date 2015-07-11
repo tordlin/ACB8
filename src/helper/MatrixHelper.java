@@ -22,6 +22,7 @@ public class MatrixHelper {
             }
             System.out.println();
         }
+        System.out.println();
     }
 
     public static int findMinInMatrix(int[][] array) {
@@ -36,6 +37,21 @@ public class MatrixHelper {
         return min;
     }
 
+    public static int[] findMinIndexInMatrix(int[][] array) {
+        int min = array[0][0];
+        int[] minIndex = array[2];
+        for (int i = 0; i < array.length; i++) {
+            for(int j = 0; j < array[i].length; j++) {
+                if (min > array[i][j]) {
+                    min = array[i][j];
+                    minIndex[0] = i;
+                    minIndex[1] = j;
+                }
+            }
+        }
+        return minIndex;
+    }
+
     public static int findMaxInMatrix(int[][] array) {
         int max = array[0][0];
         for (int i = 0; i < array.length; i++) {
@@ -48,16 +64,19 @@ public class MatrixHelper {
         return max;
     }
 
-    public static int[][] turnMatrix(int[][] matrix, int degree) {
-        int[][] matrixTemp = matrix;
-        if(degree == 90){
-
-        }else if(degree == 180){
-
-        }else if(degree == 270){
-
+    public static int[] findMaxIndexInMatrix(int[][] array) {
+        int max = array[0][0];
+        int[] maxIndex = array[2];
+        for (int i = 0; i < array.length; i++) {
+            for(int j = 0; j < array[i].length; j++) {
+                if (max < array[i][j]) {
+                    max = array[i][j];
+                    maxIndex[0] = i;
+                    maxIndex[1] = j;
+                }
+            }
         }
-        return matrix;
+        return maxIndex;
     }
 
 
@@ -74,5 +93,48 @@ public class MatrixHelper {
         int[]temp = matrix[a];
         matrix[a] = matrix[b];
         matrix[b] = temp;
+    }
+
+    public static boolean[][] createLogicMatrix(int rows, int columns) {
+        boolean[][] matrix = new boolean[rows][columns];
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                if(i == j){
+                    matrix[i][j] = true;
+                }else {
+                    matrix[i][j] = false;
+                }
+            }
+        }
+        return matrix;
+    }
+
+    public static void printBooleanMatrix(boolean[][] matrix){
+        for(int i = 0; i < matrix.length; i++){
+            for(int j = 0; j < matrix[i].length; j++){
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    public static int sumRow(int[][] matrix, int row) {
+        int sum = 0;
+
+        for(int i = 0; i < matrix[row].length; i++){
+            sum += matrix[row][i];
+        }
+        return sum;
+    }
+
+    public static int sumColumn(int[][] matrix, int column) {
+        int sum = 0;
+
+        for(int i = 0; i < matrix.length; i++){
+            sum += matrix[i][column];
+        }
+        return sum;
     }
 }

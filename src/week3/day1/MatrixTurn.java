@@ -10,7 +10,7 @@ public class MatrixTurn {
         int [][] matrix = MatrixHelper.createRandomMatrix(3,3,10);
         MatrixHelper.printMatrix(matrix);
 
-        matrix = MatrixHelper.turnMatrix(matrix, 90);
+        //matrix = MatrixHelper.turnMatrix(matrix, 90);
 
         MatrixHelper.printMatrix(matrix);
     }
